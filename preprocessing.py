@@ -45,6 +45,7 @@ def preprocess(image_path, fails):
                     cv2.line(blank_slate, prev, curr, 255, 1) # 1D color
             # blank_slate = cv2.resize(blank_slate, (0,0), fx= 2, fy=2) # zoom disabled
             # blank_slate = cv2.threshold(blank_slate, 1, 255, cv2.THRESH_BINARY)[1] # not really needed
+            blank_slate = cv2.resize(blank_slate, (65,100)) # resizing
             # cv2.imshow("1", blank_slate)
             cv2.imwrite(dest_path, blank_slate)
             # print(dest_path)
